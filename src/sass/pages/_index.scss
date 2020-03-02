@@ -1,0 +1,232 @@
+.cards {
+  min-height: 100vh;
+  height: max-content;
+
+  &__container {
+    // border: 1px solid lime;
+  }
+
+  &__column {
+  }
+
+  &__card-wrapper {
+    border-radius: 1rem;
+    box-shadow: 0px 5px 7.5px #f3eae3;
+    height: 65vh;
+    transition: all 0.5s ease;
+
+    &:hover {
+      transition: all 0.5s ease;
+      box-shadow: 0px 8px 20px #f3eae3;
+      transform: translateY(-3px);
+    }
+  }
+
+  &__video {
+    width: 100%;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+
+  &__sub-container {
+    height: 50%;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 3rem;
+  }
+
+  &__badge {
+    border-radius: 0.4rem;
+    width: max-content;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 2.4rem;
+    padding: 0rem 1.2rem;
+  }
+
+  .color {
+    background-color: #f7e8fb;
+    color: $sub-accent;
+  }
+
+  .colors {
+    background-color: #feefe5;
+    color: $accent;
+  }
+
+  &__button {
+    color: $accent;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 2.4rem;
+    transition: 0.5s all ease;
+
+    &:hover {
+      transition: 0.5s all ease;
+      opacity: 0.6;
+      cursor: pointer;
+    }
+  }
+}
+
+.design {
+  min-height: 100vh;
+  height: max-content;
+
+  &__container {
+    // border: 1px solid lime;
+  }
+
+  &__column {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  &__sub-container {
+    margin-top: 8rem;
+    width: 30%;
+  }
+}
+
+.customize {
+  min-height: 100vh;
+  height: max-content;
+  padding: 5rem 0rem;
+
+  &__content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  &__card {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    width: 48%;
+    border-radius: 1rem;
+    border: 1px solid#f3eae3;
+    box-shadow: 0px 4px 10px #f3eae3;
+    padding: 3rem;
+    margin-top: 4rem;
+  }
+  &__image-wrapper {
+    padding: 3rem;
+  }
+
+  &__image {
+    border-radius: 1rem;
+    box-shadow: 0px 2px 5px #f3eae3;
+  }
+
+  &__explore {
+    color: $accent;
+    font-size: 2.6rem;
+    font-weight: 600;
+    line-height: 3.6rem;
+    margin-top: 2.4rem;
+    text-align: center;
+  }
+
+  &__badge {
+    margin-top: 4rem;
+    color: $sub-accent;
+    background-color: #f7e8fb;
+    border-radius: 0.4rem;
+    width: max-content;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 2.4rem;
+    padding: 0rem 1.2rem;
+  }
+}
+
+.pricing {
+  min-height: 40vh;
+  height: max-content;
+  color: white;
+  margin-bottom: 5rem;
+
+  &__content {
+    z-index: 95 !important;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 0rem;
+    background-image: linear-gradient(120deg, #575859 0, #2e2f30 85%);
+    border-radius: 2rem;
+  }
+
+  &__text-wrapper {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    margin-right: 3rem;
+  }
+
+  &__heading {
+    font-size: 3.8rem;
+    font-weight: 700;
+  }
+
+  &__text {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 3.6rem;
+    opacity: 0.85;
+  }
+
+  &__buttons-wrapper {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    margin-right: 5rem;
+  }
+
+  .btn-default {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+    padding: 1.3rem 2.4rem 1rem 2.4rem;
+    border-radius: 0.5rem;
+    margin-right: 2rem;
+    transition: all 0.5s ease;
+
+    width: max-content;
+
+    &:hover {
+      transition: all 0.5s ease;
+      transform: translateY(-2px);
+      color: white;
+      opacity: 0.9;
+    }
+  }
+
+  .try {
+    background-color: $accent;
+  }
+
+  .price {
+    border: 1px solid grey;
+  }
+
+  &__logo {
+    z-index: 90 !important;
+    transform: translateX(-8rem);
+    overflow: hidden;
+  }
+}

@@ -12,7 +12,7 @@
   &__card-wrapper {
     border-radius: 1rem;
     box-shadow: 0px 5px 7.5px #f3eae3;
-    height: 65vh;
+    // height: 65%;
     transition: all 0.5s ease;
 
     &:hover {
@@ -158,9 +158,9 @@
   height: max-content;
   color: white;
   margin-bottom: 5rem;
+  z-index: 95 !important;
 
   &__content {
-    z-index: 95 !important;
     display: flex;
     flex-flow: row;
     align-items: center;
@@ -225,8 +225,122 @@
   }
 
   &__logo {
-    z-index: 90 !important;
+    z-index: 94 !important;
     transform: translateX(-8rem);
-    overflow: hidden;
+    // overflow: hidden !important;
+  }
+}
+
+.footer {
+  min-height: 50vh;
+  height: max-content;
+
+  &__left {
+    // border: 1px solid red;
+  }
+
+  &__menu {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  &__text-wrapper {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__heading {
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 2rem;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0.5rem 0rem;
+    color: rgba(0, 0, 0, 0.4);
+    line-height: 2rem;
+
+    &:hover {
+      color: $accent;
+      cursor: pointer;
+    }
+  }
+
+  &__right {
+    margin-left: 5rem;
+  }
+
+  &__form {
+    margin: 2rem 0rem;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+
+  .text {
+    font-size: 1.3rem !important;
+    font-weight: 600 !important;
+    margin: 0.5rem 0rem !important;
+    color: rgba(0, 0, 0, 0.4) !important;
+    line-height: 2rem !important;
+  }
+
+  &__input {
+    flex-grow: 1;
+    font-size: 1.3rem;
+    color: rgba(0, 0, 0, 0.4);
+    padding: 1.5rem 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    border-right: none;
+    outline: none;
+    &:focus {
+      border: 1px solid $accent;
+      border-right: none;
+    }
+  }
+
+  .btn-default {
+    color: white;
+    font-size: 1.3rem;
+    padding: 1.5rem 2rem;
+    background-color: $accent;
+    border-top-left-radius: 0rem;
+    border-bottom-left-radius: 0rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+
+    &:hover {
+      color: white;
+      background-color: rgba($accent, 0.7);
+    }
+  }
+
+  &__icons {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__icon {
+    margin-right: 1.5rem;
+    padding: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    transition: all 0.5s ease;
+
+    &:hover {
+      transition: all 0.5s ease;
+      border: 1px solid grey;
+      cursor: pointer;
+    }
   }
 }

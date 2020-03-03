@@ -120,7 +120,14 @@
     box-shadow: 0px 4px 10px #f3eae3;
     padding: 3rem;
     margin-top: 4rem;
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0px 4px 20px #f3eae3;
+      transform: scale(1.0009);
+    }
   }
+
   &__image-wrapper {
     padding: 3rem;
   }
@@ -150,6 +157,34 @@
     font-weight: 600;
     line-height: 2.4rem;
     padding: 0rem 1.2rem;
+  }
+}
+
+.companies {
+  min-height: 30vh;
+  height: max-content;
+
+  &__heading {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+
+    color: grey;
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__logo {
   }
 }
 

@@ -1,3 +1,145 @@
+.navigation {
+  min-height: 10vh;
+  height: max-content;
+  border: 1px solid red;
+}
+
+.header {
+  min-height: 100vh;
+  height: max-content;
+  background: linear-gradient(to bottom, white, rgba(255, 196, 141, 0.2));
+
+  &__column {
+    margin-top: 2rem;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  &__ribbon {
+    z-index: 100;
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    color: white;
+    background: linear-gradient(to right, rgb(238, 32, 186), $accent);
+  }
+
+  &__svg-top {
+    overflow: visible;
+    position: absolute;
+    top: -40%;
+    left: 30%;
+    fill: none;
+  }
+
+  &__svg--stroke-top {
+    fill: none;
+    stroke: orange;
+    transform: scale(1.002) translate(-2.5rem, -1rem);
+  }
+
+  &__svg-right {
+    overflow: visible;
+    position: absolute;
+    top: 20%;
+    left: 78%;
+    fill: rgb(247, 219, 168);
+  }
+
+  &__svg--stroke-right {
+    fill: none;
+    stroke: orange;
+    transform: scale(1.002) translate(-2.5rem, -1rem);
+  }
+
+  &__svg-left {
+    overflow: visible;
+    position: absolute;
+    top: 10%;
+    right: 130%;
+    fill: $accent;
+  }
+
+  &__svg--stroke-left {
+    fill: none;
+    stroke: orange;
+    transform: scale(1.002) translate(3rem, -0.2rem);
+  }
+
+  &__heading-wrapper {
+    width: 80%;
+    position: relative;
+    z-index: 100;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
+
+  &__heading {
+    font-size: 9.5rem;
+    font-weight: 700;
+    line-height: 12.4rem;
+  }
+
+  &__video {
+    position: relative;
+    z-index: 100;
+    transform: translateY(10rem);
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 15px #cac9c9;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    margin-top: 5rem;
+    z-index: 100;
+    position: relative;
+  }
+
+  .btn-default {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+    padding: 1.3rem 2.4rem 1rem 2.4rem;
+    border-radius: 0.3rem;
+    margin-right: 2rem;
+    transition: all 0.2s ease;
+
+    width: max-content;
+
+    &:hover {
+      transition: all 0.2s ease;
+      transform: translateY(-2px);
+      color: white;
+    }
+  }
+
+  .try {
+    background-color: $accent;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .price {
+    background-color: #fcfcfc;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: black;
+    &:hover {
+      color: black;
+      box-shadow: 0px 0px 15px lightgrey;
+    }
+  }
+}
+
 .cards {
   min-height: 100vh;
   height: max-content;
@@ -7,6 +149,7 @@
   }
 
   &__column {
+    margin-top: 15rem;
   }
 
   &__card-wrapper {
@@ -81,6 +224,7 @@
   }
 
   &__column {
+    margin-top: 10rem;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -99,10 +243,23 @@
   }
 }
 
+.cloud {
+  min-height: 100vh;
+  height: max-content;
+
+  &__column {
+    margin-top: 10rem;
+  }
+}
+
 .customize {
   min-height: 100vh;
   height: max-content;
   padding: 5rem 0rem;
+
+  &__column {
+    margin-top: 10rem;
+  }
 
   &__content {
     display: flex;
@@ -164,6 +321,10 @@
   min-height: 30vh;
   height: max-content;
 
+  &__column {
+    margin: 5rem 0rem;
+  }
+
   &__heading {
     display: flex;
     flex-flow: row;
@@ -189,6 +350,7 @@
 }
 
 .pricing {
+  position: relative;
   min-height: 40vh;
   height: max-content;
   color: white;
@@ -262,7 +424,6 @@
   &__logo {
     z-index: 94 !important;
     transform: translateX(-8rem);
-    // overflow: hidden !important;
   }
 }
 

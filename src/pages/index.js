@@ -16,6 +16,7 @@ import layout from "../assets/layout.png"
 import inspector from "../assets/inspector.mp4"
 import smartlayout from "../assets/smartlayout.mp4"
 import teams from "../assets/teams.mp4"
+import video from "../assets/video.mp4"
 
 import felipe from "../assets/felipe.png"
 import runner from "../assets/runner.png"
@@ -29,12 +30,76 @@ import logo from "../assets/logo.png"
 const IndexPage = () => (
   <Layout>
     <SEO title="Hileets" />
+
+    <section className="navigation">
+      <Container fluid={true}>
+        <Row>
+          <Col></Col>
+        </Row>
+      </Container>
+    </section>
+
+    <section className="header">
+      <Container>
+        <Row>
+          <Col className="header__column">
+            <div className="header__ribbon">
+              New - Cloud Inspector is here &gt;
+            </div>
+            <div className="header__heading-wrapper">
+              <span className="header__heading">The</span>
+              <span className="header__heading">best</span>
+              <span className="header__heading">products</span>
+              <span className="header__heading">start</span>
+              <span className="header__heading">with</span>
+              <span className="header__heading">Sketch</span>
+            </div>
+            <p>
+              Create, prototype, collaborate and turn your ideas into incredible
+              products with the definitive platform for digital design.
+            </p>
+
+            <div className="header__buttons">
+              <div className="btn btn-default try">Try for Free &darr;</div>
+              <div className="btn btn-default price">See Pricing</div>
+            </div>
+            <div className="space-3"></div>
+            <video className="header__video">
+              <source src={video} type="video/mp4"></source>
+            </video>
+            <svg className="header__svg-top">
+              <polygon points="0,681 1015,202 432,0"></polygon>
+              <polygon
+                className="header__svg--stroke-top"
+                points="0,681 1015,202 432,0"
+              ></polygon>
+            </svg>
+
+            <svg className="header__svg-right">
+              <polygon points="0,0 323,439 683,117"></polygon>
+              <polygon
+                className="header__svg--stroke-right"
+                points="0,0 323,439 683,117"
+              ></polygon>
+            </svg>
+            <svg className="header__svg-left">
+              <polygon points="0,606 1078,291 486,0"></polygon>
+              <polygon
+                className="header__svg--stroke-left"
+                points="0,606 1078,291 486,0"
+              ></polygon>
+            </svg>
+          </Col>
+        </Row>
+      </Container>
+    </section>
+
     <section className="cards d-flex align-items-center">
       <Container className="cards__container">
         <Row className="cards__row">
           <Col className="cards__column" xl={4}>
             <div className="cards__card-wrapper">
-              <video className="cards__video" autoplay loop>
+              <video className="cards__video" autoplay muted loop>
                 <source src={inspector} type="video/mp4"></source>
               </video>
               <div className="cards__sub-container">
@@ -167,6 +232,22 @@ const IndexPage = () => (
       </Container>
     </section>
 
+    <section className="cloud">
+      <Container>
+        <Row>
+          <Col className="cloud__column">
+            <h1 className="cloud__heading">
+              A Cloud platform, made for collaboration
+            </h1>
+            <p>
+              Whether you’re a freelancer or fully-fledged team, Cloud makes it
+              easy to bring the collaborators you need into the design process.
+            </p>
+          </Col>
+        </Row>
+      </Container>
+    </section>
+
     <section className="customize d-flex align-items-center">
       <Container className="customize__container">
         <Row className="customize__row">
@@ -265,7 +346,7 @@ const IndexPage = () => (
     <section className="companies d-flex align-items-center">
       <Container>
         <Row>
-          <Col xl={12}>
+          <Col className="companies__column" xl={12}>
             <div className="companies__heading">
               Some of the world's best products start with sketch
             </div>

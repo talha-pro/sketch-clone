@@ -337,7 +337,7 @@ const IndexPage = () => (
       <Container className="customize__container">
         <Row className="customize__row">
           <Col className="customize__column">
-            {/* <svg className="customize__svg--first--wrapper">
+            <svg className="customize__svg--first--wrapper">
               <g>
                 <rect className="customize__svg--first"></rect>
                 <rect className="customize__svg--first--stroke"></rect>
@@ -361,7 +361,7 @@ const IndexPage = () => (
                 <rect className="customize__svg--fourth"></rect>
                 <rect className="customize__svg--fourth--stroke"></rect>
               </g>
-            </svg> */}
+            </svg>
 
             <h1>Customize your workflow</h1>
             <p>

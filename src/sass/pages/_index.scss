@@ -519,7 +519,7 @@
   min-height: 100vh;
   height: max-content;
   padding: 5rem 0rem;
-
+  overflow: hidden;
   background: linear-gradient(to top, white, rgba(194, 194, 193, 0.2));
 
   &__column {
@@ -534,10 +534,45 @@
     overflow: hidden;
     z-index: 90;
     position: absolute;
-    top: -30%;
-    right: 70%;
-    height: 80%;
-    width: 70%;
+
+    @media (max-width: 576px) {
+      transform: rotate(20deg);
+      overflow: visible;
+      height: 100%;
+      width: 100%;
+      top: -5%;
+      right: 100%;
+    }
+
+    @media (min-width: 576px) {
+      transform: rotate(20deg);
+      height: 100%;
+      width: 100%;
+      top: -30%;
+      right: 100%;
+      overflow: visible;
+    }
+
+    @media (min-width: 768px) {
+      transform: rotate(20deg);
+      height: 100%;
+      width: 100%;
+      top: -30%;
+      right: 70%;
+    }
+
+    @media (min-width: 992px) {
+      transform: rotate(80deg);
+      height: 80%;
+      width: 70%;
+      top: -30%;
+      right: 70%;
+    }
+
+    @media (min-width: 1200px) {
+      top: -30%;
+      right: 70%;
+    }
   }
 
   &__svg--first {
@@ -559,11 +594,47 @@
     overflow: hidden;
     z-index: 90;
     position: absolute;
-    top: -10%;
-    right: 50%;
     height: 70%;
     width: 70%;
     transform: rotate(40deg);
+
+    @media (max-width: 576px) {
+      overflow: visible;
+      transform: rotate(15deg);
+      height: 100%;
+      width: 100%;
+      top: -10%;
+      right: 60%;
+    }
+
+    @media (min-width: 576px) {
+      transform: rotate(20deg);
+      height: 100%;
+      width: 100%;
+      top: -10%;
+      right: 50%;
+    }
+
+    @media (min-width: 768px) {
+      transform: rotate(25deg);
+      height: 100%;
+      width: 100%;
+      top: -10%;
+      right: 40%;
+    }
+
+    @media (min-width: 992px) {
+      transform: rotate(50deg);
+      height: 70%;
+      width: 70%;
+      top: -20%;
+      right: 50%;
+    }
+
+    @media (min-width: 1200px) {
+      top: -20%;
+      right: 50%;
+    }
   }
 
   &__svg--second {
@@ -585,11 +656,39 @@
     overflow: hidden;
     z-index: 90;
     position: absolute;
-    top: -15%;
-    right: 25%;
     height: 70%;
     width: 70%;
     transform: rotate(25deg);
+
+    @media (max-width: 576px) {
+      opacity: 0;
+    }
+
+    @media (min-width: 576px) {
+      opacity: 0;
+    }
+
+    @media (min-width: 768px) {
+      opacity: 1;
+      transform: rotate(35deg);
+      height: 100%;
+      width: 100%;
+      top: -20%;
+      right: 20%;
+    }
+
+    @media (min-width: 992px) {
+      transform: rotate(70deg);
+      height: 70%;
+      width: 70%;
+      top: -20%;
+      right: 30%;
+    }
+
+    @media (min-width: 1200px) {
+      top: -25%;
+      right: 25%;
+    }
   }
 
   &__svg--third {
@@ -608,14 +707,45 @@
   }
 
   &__svg--fourth--wrapper {
-    overflow: hidden;
     z-index: 90;
     position: absolute;
-    top: -40%;
-    right: 5%;
-    height: 70%;
-    width: 70%;
-    transform: rotate(80deg);
+
+    @media (max-width: 576px) {
+      transform: rotate(20deg);
+      height: 100%;
+      width: 100%;
+      top: -5%;
+      right: -10%;
+    }
+
+    @media (min-width: 576px) {
+      transform: rotate(20deg);
+      height: 100%;
+      width: 100%;
+      top: -10%;
+      right: -10%;
+    }
+
+    @media (min-width: 768px) {
+      transform: rotate(20deg);
+      height: 100%;
+      width: 100%;
+      top: -30%;
+      right: -30%;
+    }
+
+    @media (min-width: 992px) {
+      transform: rotate(80deg);
+      height: 70%;
+      width: 70%;
+      top: -40%;
+      right: -10%;
+    }
+
+    @media (min-width: 1200px) {
+      top: -40%;
+      right: -15%;
+    }
   }
 
   &__svg--fourth {

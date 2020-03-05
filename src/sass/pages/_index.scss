@@ -573,12 +573,10 @@
 }
 
 .pricing {
-  position: relative;
   min-height: 40vh;
   height: max-content;
   color: white;
   margin-bottom: 5rem;
-  z-index: 95 !important;
 
   &__content {
     display: flex;
@@ -588,6 +586,20 @@
     padding: 5rem 0rem;
     background-image: linear-gradient(120deg, #575859 0, #2e2f30 85%);
     border-radius: 2rem;
+  }
+
+  &__logo--wrapper {
+    height: 15rem;
+    width: 15rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__logo {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translate(-50%, 0%);
   }
 
   &__text-wrapper {
@@ -642,11 +654,6 @@
 
   .price {
     border: 1px solid grey;
-  }
-
-  &__logo {
-    z-index: 94 !important;
-    transform: translateX(-8rem);
   }
 }
 

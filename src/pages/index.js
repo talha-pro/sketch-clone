@@ -565,7 +565,9 @@ const IndexPage = () => (
         <Row className="pricing__row">
           <Col className="pricing__column">
             <div className="pricing__content">
-              <Image className="pricing__logo" src={logo} fluid></Image>
+              <div className="pricing__logo--wrapper">
+                <Image className="pricing__logo" src={logo} fluid></Image>
+              </div>
 
               <div className="pricing__text-wrapper">
                 <span className="pricing__heading">

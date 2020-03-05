@@ -31,7 +31,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Hileets" />
 
-    <section className="navigation d-flex align-items-center">
+    {/* <section className="navigation d-flex align-items-center">
       <Container className="navigation__container" fluid={true}>
         <Row className="navigation__row">
           <Col className="navigation__column">
@@ -86,12 +86,35 @@ const IndexPage = () => (
           </Col>
         </Row>
       </Container>
-    </section>
+    </section> */}
 
     <section className="header">
       <Container>
         <Row>
           <Col className="header__column">
+            <svg className="header__svg-top">
+              <polygon points="0,681 1015,202 432,0"></polygon>
+              <polygon
+                className="header__svg--stroke-top"
+                points="0,681 1015,202 432,0"
+              ></polygon>
+            </svg>
+
+            <svg className="header__svg-right">
+              <polygon points="0,0 323,439 683,117"></polygon>
+              <polygon
+                className="header__svg--stroke-right"
+                points="0,0 323,439 683,117"
+              ></polygon>
+            </svg>
+
+            <svg className="header__svg-left">
+              <polygon points="0,606 1078,291 486,0"></polygon>
+              <polygon
+                className="header__svg--stroke-left"
+                points="0,606 1078,291 486,0"
+              ></polygon>
+            </svg>
             <div className="header__ribbon">
               New - Cloud Inspector is here &gt;
             </div>
@@ -113,31 +136,9 @@ const IndexPage = () => (
               <div className="btn btn-default price">See Pricing</div>
             </div>
             <div className="space-3"></div>
-            <video className="header__video">
+            <video className="header__header-video">
               <source src={video} type="video/mp4"></source>
             </video>
-            <svg className="header__svg-top">
-              <polygon points="0,681 1015,202 432,0"></polygon>
-              <polygon
-                className="header__svg--stroke-top"
-                points="0,681 1015,202 432,0"
-              ></polygon>
-            </svg>
-
-            <svg className="header__svg-right">
-              <polygon points="0,0 323,439 683,117"></polygon>
-              <polygon
-                className="header__svg--stroke-right"
-                points="0,0 323,439 683,117"
-              ></polygon>
-            </svg>
-            <svg className="header__svg-left">
-              <polygon points="0,606 1078,291 486,0"></polygon>
-              <polygon
-                className="header__svg--stroke-left"
-                points="0,606 1078,291 486,0"
-              ></polygon>
-            </svg>
           </Col>
         </Row>
       </Container>
@@ -146,7 +147,7 @@ const IndexPage = () => (
     <section className="cards d-flex align-items-center">
       <Container className="cards__container">
         <Row className="cards__row">
-          <Col className="cards__column" xl={4}>
+          <Col className="cards__column" xs={12} sm={12} md={12} lg={4} xl={4}>
             <div className="cards__card-wrapper">
               <video className="cards__video" autoplay muted loop>
                 <source src={inspector} type="video/mp4"></source>
@@ -163,7 +164,7 @@ const IndexPage = () => (
               </div>
             </div>
           </Col>
-          <Col className="cards__column" xl={4}>
+          <Col className="cards__column" xs={12} sm={12} md={12} lg={4} xl={4}>
             <div className="cards__card-wrapper">
               <video className="cards__video" autoplay loop>
                 <source src={smartlayout} type="video/mp4"></source>
@@ -181,7 +182,7 @@ const IndexPage = () => (
               </div>
             </div>
           </Col>
-          <Col className="cards__column" xl={4}>
+          <Col className="cards__column" xs={12} sm={12} md={12} lg={4} xl={4}>
             <div className="cards__card-wrapper">
               <video className="cards__video" playsinline muted loop autoplay>
                 <source src={teams} type="video/mp4"></source>
@@ -335,7 +336,7 @@ const IndexPage = () => (
       <Container className="customize__container">
         <Row className="customize__row">
           <Col className="customize__column">
-            <svg className="customize__svg--first--wrapper">
+            {/* <svg className="customize__svg--first--wrapper">
               <g>
                 <rect className="customize__svg--first"></rect>
                 <rect className="customize__svg--first--stroke"></rect>
@@ -359,7 +360,7 @@ const IndexPage = () => (
                 <rect className="customize__svg--fourth"></rect>
                 <rect className="customize__svg--fourth--stroke"></rect>
               </g>
-            </svg>
+            </svg> */}
 
             <h1>Customize your workflow</h1>
             <p>
@@ -590,7 +591,7 @@ const IndexPage = () => (
     <section className="footer">
       <Container className="footer__container">
         <Row className="footer__row">
-          <Col className="footer__left" xl={7}>
+          <Col className="footer__left" md={12} lg={7} xl={7}>
             <div className="footer__menu">
               <div className="footer__text-wrapper">
                 <div className="footer__heading">Sketch</div>
@@ -643,7 +644,7 @@ const IndexPage = () => (
               </div>
             </div>
           </Col>
-          <Col className="footer__right" xl={4}>
+          <Col className="footer__right" md={12} lg={4} xl={4}>
             <div className="footer__content">
               <div className="footer__heading">Subscribe to our newsletter</div>
               <div className="text">

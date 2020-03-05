@@ -4,6 +4,8 @@
   margin: 0rem;
   padding: 0rem;
   box-sizing: inherit;
+
+  // border: 1px solid blue;
 }
 
 html,
@@ -16,11 +18,32 @@ body {
 h1 {
   position: relative;
   z-index: 100 !important;
-  width: 70%;
-  font-size: 6.8rem !important;
   font-weight: 700 !important;
   line-height: 7.2rem !important;
   text-align: center !important;
+
+  @media (max-width: 576px) {
+    width: 100%;
+    font-size: 5rem !important;
+  }
+
+  @media (min-width: 576px) {
+    width: 100%;
+    font-size: 5rem !important;
+  }
+
+  @media (min-width: 768px) {
+    width: 100%;
+    font-size: 6.8rem !important;
+  }
+
+  @media (min-width: 992px) {
+    width: 90%;
+  }
+
+  @media (min-width: 1200px) {
+    width: 70%;
+  }
 }
 
 h3 {
@@ -30,7 +53,6 @@ h3 {
 }
 
 p {
-  width: 70%;
   position: relative;
   z-index: 100;
   font-size: 2.6rem !important;
@@ -38,6 +60,24 @@ p {
   line-height: 3.6rem !important;
   margin-top: 2rem !important;
   text-align: center !important;
+
+  @media (max-width: 576px) {
+  }
+
+  @media (min-width: 576px) {
+  }
+
+  @media (min-width: 768px) {
+    width: 100% !important;
+  }
+
+  @media (min-width: 992px) {
+    width: 100% !important;
+  }
+
+  @media (min-width: 1200px) {
+    width: 100% !important;
+  }
 }
 
 .text {

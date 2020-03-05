@@ -707,6 +707,7 @@ const IndexPage = () => (
             </div>
           </Col>
         </Row>
+        <div className="space-4"></div>
       </Container>
     </section>
   </Layout>

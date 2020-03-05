@@ -86,6 +86,13 @@
       rgb(238, 32, 186),
       $accent
     );
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transition: all 0.3s ease;
+      cursor: pointer;
+      transform: translateY(-0.3rem);
+    }
   }
 
   &__svg-top {
@@ -216,14 +223,14 @@
 
   &__card-wrapper {
     border-radius: 1rem;
-    box-shadow: 0px 5px 7.5px #f3eae3;
-    // height: 65%;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+    height: auto;
     transition: all 0.5s ease;
 
     &:hover {
       transition: all 0.5s ease;
-      box-shadow: 0px 8px 20px #f3eae3;
-      transform: translateY(-3px);
+      box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+      transform: translateY(-1.5px);
     }
   }
 

@@ -308,6 +308,9 @@
 .cloud {
   min-height: 100vh;
   height: max-content;
+  position: relative;
+  z-index: 100;
+  background-color: white;
 
   &__column {
     margin-top: 10rem;
@@ -355,15 +358,115 @@
 
   background: linear-gradient(to top, white, rgba(194, 194, 193, 0.2));
 
-  &__svg {
-    transform: scale(0.833333) translate(-343px, -343px);
-  }
-
   &__column {
-    margin-top: 10rem;
+    margin-top: 5rem;
     display: flex;
     flex-flow: column;
     align-items: center;
+    position: relative;
+  }
+
+  &__svg--first--wrapper {
+    overflow: hidden;
+    z-index: 90;
+    position: absolute;
+    top: -25%;
+    right: 70%;
+    height: 70%;
+    width: 70%;
+  }
+
+  &__svg--first {
+    fill: white;
+    width: 48.5rem;
+    height: 48.5rem;
+    transform: rotate(45deg) translate(40%, -30%);
+  }
+
+  &__svg--first--stroke {
+    fill: none;
+    stroke: rgba(0, 0, 0, 0.1);
+    width: 51rem;
+    height: 51rem;
+    transform: rotate(45deg) translate(40%, -31%);
+  }
+
+  &__svg--second--wrapper {
+    overflow: hidden;
+    z-index: 90;
+    position: absolute;
+    top: -10%;
+    right: 50%;
+    height: 70%;
+    width: 70%;
+    transform: rotate(40deg);
+  }
+
+  &__svg--second {
+    fill: rgba(0, 0, 0, 0.06);
+    width: 20rem;
+    height: 20rem;
+    transform: rotate(40deg) translate(40%, -30%);
+  }
+
+  &__svg--second--stroke {
+    fill: none;
+    stroke: rgba(0, 0, 0, 0.1);
+    width: 20rem;
+    height: 20rem;
+    transform: rotate(40deg) translate(41%, -29%);
+  }
+
+  &__svg--third--wrapper {
+    overflow: hidden;
+    z-index: 90;
+    position: absolute;
+    top: -15%;
+    right: 25%;
+    height: 70%;
+    width: 70%;
+    transform: rotate(25deg);
+  }
+
+  &__svg--third {
+    fill: rgba(0, 0, 0, 0.06);
+    width: 20rem;
+    height: 20rem;
+    transform: rotate(40deg) translate(40%, -30%);
+  }
+
+  &__svg--third--stroke {
+    fill: none;
+    stroke: rgba(0, 0, 0, 0.1);
+    width: 20rem;
+    height: 20rem;
+    transform: rotate(40deg) translate(41%, -29%);
+  }
+
+  &__svg--fourth--wrapper {
+    overflow: hidden;
+    z-index: 90;
+    position: absolute;
+    top: -40%;
+    right: 5%;
+    height: 70%;
+    width: 70%;
+    transform: rotate(80deg);
+  }
+
+  &__svg--fourth {
+    fill: rgba(0, 0, 0, 0.06);
+    width: 40rem;
+    height: 40rem;
+    transform: rotate(40deg) translate(40%, -30%);
+  }
+
+  &__svg--fourth--stroke {
+    fill: none;
+    stroke: rgba(0, 0, 0, 0.1);
+    width: 40rem;
+    height: 40rem;
+    transform: rotate(40deg) translate(41%, -29%);
   }
 
   &__content {
@@ -373,34 +476,48 @@
   }
 
   &__card {
+    position: relative;
+    z-index: 100;
     background: white;
     display: flex;
     flex-flow: row;
     align-items: center;
     width: 48%;
     border-radius: 1rem;
-    border: 1px solid#f3eae3;
-    box-shadow: 0px 4px 10px #f3eae3;
-    padding: 3rem;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+    padding: 2rem 3rem;
     margin-top: 4rem;
+    transition: all 0.5s ease;
 
     &:hover {
+      transition: all 0.5s ease;
       cursor: pointer;
-      box-shadow: 0px 4px 20px #f3eae3;
-      transform: scale(1.0009);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+      transform: translateY(-1.5px);
     }
   }
 
   &__image-wrapper {
-    padding: 3rem;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    padding: 0rem 3rem;
   }
 
   &__image {
-    border-radius: 1rem;
-    box-shadow: 0px 2px 5px #f3eae3;
+    height: 7rem;
+    width: 7rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
   }
 
   &__explore {
+    position: relative;
+    z-index: 100;
+    cursor: pointer;
     color: $accent;
     font-size: 2.6rem;
     font-weight: 600;

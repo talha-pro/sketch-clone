@@ -335,29 +335,32 @@ const IndexPage = () => (
       <Container className="customize__container">
         <Row className="customize__row">
           <Col className="customize__column">
-            <div
-              class="hero-background__shape hero-background__shape--fill1"
-              // style="left: 27.3333px; top: 152.5px;"
-            >
-              <div class="hero-background__shape__transform">
-                <svg
-                  className="customize__svg"
-                  width="686"
-                  height="686"
-                  // style="transform: scale(0.833333) translate(-343px, -343px);"
-                >
-                  <g transform="translate(100.5, 100.5)">
-                    <rect
-                      class="fill1"
-                      fill="#fff"
-                      width="485"
-                      height="485"
-                      transform="rotate(45 242.5 242.5)"
-                    ></rect>
-                  </g>
-                </svg>
-              </div>
-            </div>
+            <svg className="customize__svg--first--wrapper">
+              <g>
+                <rect className="customize__svg--first"></rect>
+                <rect className="customize__svg--first--stroke"></rect>
+              </g>
+            </svg>
+            <svg className="customize__svg--second--wrapper">
+              <g>
+                <rect className="customize__svg--second"></rect>
+                <rect className="customize__svg--second--stroke"></rect>
+              </g>
+            </svg>
+            <svg className="customize__svg--third--wrapper">
+              <g>
+                <rect className="customize__svg--third"></rect>
+                <rect className="customize__svg--third--stroke"></rect>
+              </g>
+            </svg>
+
+            <svg className="customize__svg--fourth--wrapper">
+              <g>
+                <rect className="customize__svg--fourth"></rect>
+                <rect className="customize__svg--fourth--stroke"></rect>
+              </g>
+            </svg>
+
             <h1>Customize your workflow</h1>
             <p>
               Whether you want to automatically arrange your Artboards, speed up

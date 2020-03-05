@@ -31,7 +31,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Hileets" />
 
-    {/* <section className="navigation d-flex align-items-center">
+    <section className="navigation d-flex align-items-center">
       <Container className="navigation__container" fluid={true}>
         <Row className="navigation__row">
           <Col className="navigation__column">
@@ -86,7 +86,7 @@ const IndexPage = () => (
           </Col>
         </Row>
       </Container>
-    </section> */}
+    </section>
 
     <section className="header">
       <Container>
@@ -136,9 +136,10 @@ const IndexPage = () => (
               <div className="btn btn-default price">See Pricing</div>
             </div>
             <div className="space-3"></div>
-            <video className="header__header-video">
+            <video className="header__header-video" autoPlay muted loop>
               <source src={video} type="video/mp4"></source>
             </video>
+            <div className="space-3"></div>
           </Col>
         </Row>
       </Container>
@@ -149,7 +150,7 @@ const IndexPage = () => (
         <Row className="cards__row">
           <Col className="cards__column" xs={12} sm={12} md={12} lg={4} xl={4}>
             <div className="cards__card-wrapper">
-              <video className="cards__video" autoplay muted loop>
+              <video className="cards__video" autoPlay muted loop>
                 <source src={inspector} type="video/mp4"></source>
               </video>
               <div className="cards__sub-container">
@@ -166,7 +167,7 @@ const IndexPage = () => (
           </Col>
           <Col className="cards__column" xs={12} sm={12} md={12} lg={4} xl={4}>
             <div className="cards__card-wrapper">
-              <video className="cards__video" autoplay loop>
+              <video className="cards__video" autoPlay muted loop>
                 <source src={smartlayout} type="video/mp4"></source>
               </video>
               <div className="cards__sub-container">
@@ -184,7 +185,7 @@ const IndexPage = () => (
           </Col>
           <Col className="cards__column" xs={12} sm={12} md={12} lg={4} xl={4}>
             <div className="cards__card-wrapper">
-              <video className="cards__video" playsinline muted loop autoplay>
+              <video className="cards__video" autoPlay muted loop>
                 <source src={teams} type="video/mp4"></source>
               </video>
               <div className="cards__sub-container">
@@ -283,7 +284,7 @@ const IndexPage = () => (
     </section>
 
     <section className="cloud">
-      <Container>
+      <Container className="cloud__container">
         <Row>
           <Col className="cloud__column">
             <h1 className="cloud__heading">

@@ -248,6 +248,8 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
+    // overflow: hidden;
+    // height: 30px;
 
     @media (max-width: 576px) {
       width: 100%;
@@ -270,9 +272,14 @@
     }
   }
 
+  &__item--wrapper {
+    display: flex;
+    overflow: hidden;
+    height: max-content;
+  }
+
   &__heading {
     margin: -1.5rem 0rem;
-
     font-weight: 700;
     line-height: 12.4rem;
 

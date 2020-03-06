@@ -43,7 +43,9 @@ const IndexPage = () => {
   //   })
   // }, [])
 
-  let para = useRef(null)
+  let customizePara = useRef(null)
+  let customizeCards = useRef(null)
+  let customizeCardsTwo = useRef(null)
   let designContent = useRef(null)
   let designContentSecond = useRef(null)
 
@@ -258,6 +260,216 @@ const IndexPage = () => {
       .setTween(designCardSix)
       .on("enter", () => {
         designCardSix.play()
+      })
+      .addTo(controller)
+
+    const cloud = new gsap.timeline({ paused: true })
+
+    cloud.from("#cloud-heading", 0.5, {
+      y: 30,
+      ease: Power4.ease,
+      opacity: 0,
+    })
+
+    cloud.from("#cloud-para", 0.5, {
+      y: 30,
+      ease: Power4.ease,
+      opacity: 0,
+    })
+
+    new ScrollMagic.Scene({
+      triggerElement: ".cloud",
+      triggerOffset: -150,
+    })
+      .setTween(cloud)
+      .on("enter", () => {
+        cloud.play()
+      })
+      .addTo(controller)
+
+    const customizeHeading = new gsap.timeline({ paused: true })
+
+    customizeHeading.from("#customize-heading", 0.5, {
+      y: 30,
+      ease: Power4.ease,
+      opacity: 0,
+    })
+
+    customizeHeading.from("#customize-para", 0.5, {
+      y: 30,
+      ease: Power4.ease,
+      opacity: 0,
+    })
+
+    customizeHeading.from("#customize-explore", 0.5, {
+      y: 30,
+      ease: Power4.ease,
+      opacity: 0,
+    })
+
+    new ScrollMagic.Scene({
+      triggerElement: ".customize",
+      triggerOffset: -150,
+    })
+      .setTween(customizeHeading)
+      .on("enter", () => {
+        customizeHeading.play()
+      })
+      .addTo(controller)
+
+    const customizeCard = new gsap.timeline({ paused: true })
+
+    customizeCard
+      .from("#customize-card-one", 0.5, {
+        translateX: -3000,
+        // y: 30,
+        // ease: Power4.easeIn,
+        opacity: 0,
+      })
+      .to("#customize-card-one", 1, {
+        translateX: 0,
+        // y: 30,
+        ease: Power4.easeInOut,
+        opacity: 1,
+      })
+
+    new ScrollMagic.Scene({
+      triggerElement: customizePara.current,
+      triggerOffset: -150,
+    })
+      .setTween(customizeCard)
+      .on("enter", () => {
+        customizeCard.play()
+      })
+      .addTo(controller)
+
+    const customizeCardTwo = new gsap.timeline({ paused: true })
+
+    customizeCardTwo
+      .from("#customize-card-two", 0.5, {
+        translateX: 3000,
+        // y: 30,
+        ease: Power4.ease,
+        opacity: 0,
+      })
+      .to("#customize-card-two", 1, {
+        translateX: 0,
+        // y: 30,
+        ease: Power4.ease,
+        opacity: 1,
+      })
+
+    new ScrollMagic.Scene({
+      triggerElement: customizePara.current,
+      triggerOffset: -150,
+    })
+      .setTween(customizeCardTwo)
+      .on("enter", () => {
+        customizeCardTwo.play()
+      })
+      .addTo(controller)
+
+    const customizeCardThree = new gsap.timeline({ paused: true })
+
+    customizeCardThree
+      .from("#customize-card-three", 0.5, {
+        translateX: -3000,
+        ease: Power4.ease,
+        opacity: 0,
+        delay: 0.5,
+      })
+      .to("#customize-card-three", 1, {
+        translateX: 0,
+        ease: Power4.ease,
+        opacity: 1,
+        delay: 0.5,
+      })
+
+    new ScrollMagic.Scene({
+      triggerElement: customizeCards.current,
+      triggerOffset: -150,
+    })
+      .setTween(customizeCardThree)
+      .on("enter", () => {
+        customizeCardThree.play()
+      })
+      .addTo(controller)
+
+    const customizeCardFour = new gsap.timeline({ paused: true })
+
+    customizeCardFour
+      .from("#customize-card-four", 0.5, {
+        translateX: 3000,
+        ease: Power4.ease,
+        opacity: 0,
+        delay: 0.5,
+      })
+      .to("#customize-card-four", 1, {
+        translateX: 0,
+        ease: Power4.ease,
+        opacity: 1,
+        delay: 0.5,
+      })
+
+    new ScrollMagic.Scene({
+      triggerElement: customizeCards.current,
+      triggerOffset: -150,
+    })
+      .setTween(customizeCardFour)
+      .on("enter", () => {
+        customizeCardFour.play()
+      })
+      .addTo(controller)
+
+    const customizeCardFive = new gsap.timeline({ paused: true })
+
+    customizeCardFive
+      .from("#customize-card-five", 0.5, {
+        translateX: -3000,
+        ease: Power4.ease,
+        opacity: 0,
+        delay: 0.5,
+      })
+      .to("#customize-card-five", 1, {
+        translateX: 0,
+        ease: Power4.ease,
+        opacity: 1,
+        delay: 0.5,
+      })
+
+    new ScrollMagic.Scene({
+      triggerElement: customizeCardsTwo.current,
+      triggerOffset: -150,
+    })
+      .setTween(customizeCardFive)
+      .on("enter", () => {
+        customizeCardFive.play()
+      })
+      .addTo(controller)
+
+    const customizeCardSix = new gsap.timeline({ paused: true })
+
+    customizeCardSix
+      .from("#customize-card-six", 0.5, {
+        translateX: 3000,
+        ease: Power4.ease,
+        opacity: 0,
+        delay: 0.5,
+      })
+      .to("#customize-card-five", 1, {
+        translateX: 0,
+        ease: Power4.ease,
+        opacity: 1,
+        delay: 0.5,
+      })
+
+    new ScrollMagic.Scene({
+      triggerElement: customizeCardsTwo.current,
+      triggerOffset: -150,
+    })
+      .setTween(customizeCardSix)
+      .on("enter", () => {
+        customizeCardSix.play()
       })
       .addTo(controller)
   }, [])
@@ -581,10 +793,10 @@ const IndexPage = () => {
         <Container className="cloud__container">
           <Row>
             <Col className="cloud__column">
-              <h1 className="cloud__heading">
+              <h1 id="cloud-heading" className="cloud__heading">
                 A Cloud platform, made for collaboration
               </h1>
-              <p>
+              <p id="cloud-para">
                 Whether you’re a freelancer or fully-fledged team, Cloud makes
                 it easy to bring the collaborators you need into the design
                 process.
@@ -658,18 +870,18 @@ const IndexPage = () => {
                 </g>
               </svg>
 
-              <h1>Customize your workflow</h1>
-              <p>
+              <h1 id="customize-heading">Customize your workflow</h1>
+              <p id="customize-para" ref={customizePara}>
                 Whether you want to automatically arrange your Artboards, speed
                 up a localization project, or add cat GIFs to your projects,
                 there are hundreds of plugins and integrations built for Sketch
                 and ready to help you out.
               </p>
-              <div className="customize__explore">
+              <div id="customize-explore" className="customize__explore">
                 Explore plugins and integrations &rarr;
               </div>
               <div className="customize__content">
-                <div className="customize__card">
+                <div id="customize-card-one" className="customize__card">
                   <div className="customize__image-wrapper">
                     <img className="customize__image" src={felipe}></img>
                   </div>
@@ -681,7 +893,11 @@ const IndexPage = () => {
                     <div className="customize__badge">Plugin</div>
                   </div>
                 </div>
-                <div className="customize__card">
+                <div
+                  ref={customizeCards}
+                  id="customize-card-two"
+                  className="customize__card"
+                >
                   <div className="customize__image-wrapper">
                     <img className="customize__image" src={runner}></img>
                   </div>
@@ -694,7 +910,7 @@ const IndexPage = () => {
                     <div className="customize__badge">Plugin</div>
                   </div>
                 </div>
-                <div className="customize__card">
+                <div id="customize-card-three" className="customize__card">
                   <div className="customize__image-wrapper">
                     <img className="customize__image" src={chart}></img>
                   </div>
@@ -707,7 +923,11 @@ const IndexPage = () => {
                     <div className="customize__badge">Plugin</div>
                   </div>
                 </div>
-                <div className="customize__card">
+                <div
+                  ref={customizeCardsTwo}
+                  id="customize-card-four"
+                  className="customize__card"
+                >
                   <div className="customize__image-wrapper">
                     <img className="customize__image" src={material}></img>
                   </div>
@@ -719,7 +939,7 @@ const IndexPage = () => {
                     <div className="customize__badge">Plugin</div>
                   </div>
                 </div>
-                <div className="customize__card">
+                <div id="customize-card-five" className="customize__card">
                   <div className="customize__image-wrapper">
                     <img className="customize__image" src={anima}></img>
                   </div>
@@ -731,7 +951,7 @@ const IndexPage = () => {
                     <div className="customize__badge">Plugin</div>
                   </div>
                 </div>
-                <div className="customize__card">
+                <div id="customize-card-six" className="customize__card">
                   <div className="customize__image-wrapper">
                     <img className="customize__image" src={react}></img>
                   </div>

@@ -44,6 +44,8 @@ const IndexPage = () => {
   // }, [])
 
   let para = useRef(null)
+  let designContent = useRef(null)
+  let designContentSecond = useRef(null)
 
   useEffect(() => {
     var tl = new TimelineMax()
@@ -142,6 +144,120 @@ const IndexPage = () => {
       .setTween(paraTimeline)
       .on("enter", () => {
         paraTimeline.play()
+      })
+      .addTo(controller)
+
+    const designCard = new gsap.timeline({ paused: true })
+
+    designCard.from("#designcard-one", 0.8, {
+      y: 40,
+      ease: Power4.ease,
+      opacity: 0,
+      // delay: 0.1,
+    })
+
+    new ScrollMagic.Scene({
+      triggerElement: designContent.current,
+      triggerOffset: -150,
+    })
+      .setTween(designCard)
+      .on("enter", () => {
+        designCard.play()
+      })
+      .addTo(controller)
+
+    const designCardTwo = new gsap.timeline({ paused: true })
+
+    designCardTwo.from("#designcard-two", 0.8, {
+      y: 40,
+      ease: Power4.ease,
+      opacity: 0,
+      delay: 0.1,
+    })
+
+    new ScrollMagic.Scene({
+      triggerElement: designContent.current,
+      triggerOffset: -150,
+    })
+      .setTween(designCardTwo)
+      .on("enter", () => {
+        designCardTwo.play()
+      })
+      .addTo(controller)
+
+    const designCardThree = new gsap.timeline({ paused: true })
+
+    designCardThree.from("#designcard-three", 0.8, {
+      y: 40,
+      ease: Power4.ease,
+      opacity: 0,
+      delay: 0.2,
+    })
+
+    new ScrollMagic.Scene({
+      triggerElement: designContent.current,
+      triggerOffset: -150,
+    })
+      .setTween(designCardThree)
+      .on("enter", () => {
+        designCardThree.play()
+      })
+      .addTo(controller)
+
+    const designCardFour = new gsap.timeline({ paused: true })
+
+    designCardFour.from("#designcard-four", 0.8, {
+      y: 40,
+      ease: Power4.ease,
+      opacity: 0,
+      delay: 0.3,
+    })
+
+    new ScrollMagic.Scene({
+      triggerElement: designContentSecond.current,
+      triggerOffset: -100,
+    })
+      .setTween(designCardFour)
+      .on("enter", () => {
+        designCardFour.play()
+      })
+      .addTo(controller)
+
+    const designCardFive = new gsap.timeline({ paused: true })
+
+    designCardFive.from("#designcard-five", 0.8, {
+      y: 40,
+      ease: Power4.ease,
+      opacity: 0,
+      delay: 0.4,
+    })
+
+    new ScrollMagic.Scene({
+      triggerElement: designContentSecond.current,
+      triggerOffset: -100,
+    })
+      .setTween(designCardFive)
+      .on("enter", () => {
+        designCardFive.play()
+      })
+      .addTo(controller)
+
+    const designCardSix = new gsap.timeline({ paused: true })
+
+    designCardSix.from("#designcard-six", 0.8, {
+      y: 40,
+      ease: Power4.ease,
+      opacity: 0,
+      delay: 0.5,
+    })
+
+    new ScrollMagic.Scene({
+      triggerElement: designContentSecond.current,
+      triggerOffset: -100,
+    })
+      .setTween(designCardSix)
+      .on("enter", () => {
+        designCardSix.play()
       })
       .addTo(controller)
   }, [])
@@ -383,13 +499,13 @@ const IndexPage = () => {
               <h1 className="design__heading" id="subheading">
                 A native Mac app, built for designers like you
               </h1>
-              <p ref={para} id="para-design">
+              <p id="para-design">
                 Create your best work with essential tools that speed up your
                 workflow and game-changing features that take your designs to
                 the next level.
               </p>
-              <div className="design__content">
-                <div className="design__sub-container">
+              <div ref={designContent} className="design__content">
+                <div id="designcard-one" className="design__sub-container">
                   <div className="design__image-wrapper">
                     <img src={powerful}></img>
                   </div>
@@ -399,7 +515,7 @@ const IndexPage = () => {
                     familiarity, power and performance where you need it most.
                   </div>
                 </div>
-                <div className="design__sub-container">
+                <div id="designcard-two" className="design__sub-container">
                   <div className="design__image-wrapper">
                     <img src={macapp}></img>
                   </div>
@@ -410,7 +526,11 @@ const IndexPage = () => {
                     focus.
                   </div>
                 </div>
-                <div className="design__sub-container">
+                <div
+                  ref={designContentSecond}
+                  id="designcard-three"
+                  className="design__sub-container"
+                >
                   <div className="design__image-wrapper">
                     <img src={symbols}></img>
                   </div>
@@ -420,7 +540,7 @@ const IndexPage = () => {
                     the foundations for your product's design system.
                   </div>
                 </div>
-                <div className="design__sub-container">
+                <div id="designcard-four" className="design__sub-container">
                   <div className="design__image-wrapper">
                     <img src={prototype}></img>
                   </div>
@@ -430,7 +550,7 @@ const IndexPage = () => {
                     interactive prototypes, ready to share in minutes.
                   </div>
                 </div>
-                <div className="design__sub-container">
+                <div id="designcard-five" className="design__sub-container">
                   <div className="design__image-wrapper">
                     <img src={stack}></img>
                   </div>
@@ -440,7 +560,7 @@ const IndexPage = () => {
                     add faces, names, places and more in just a few clicks.
                   </div>
                 </div>
-                <div className="design__sub-container">
+                <div id="designcard-six" className="design__sub-container">
                   <div className="design__image-wrapper">
                     <img src={layout}></img>
                   </div>

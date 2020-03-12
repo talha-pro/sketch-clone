@@ -606,7 +606,7 @@ const IndexPage = () => {
               <p id="para">
                 Create, prototype, collaborate and turn your ideas into
                 incredible products with the definitive platform for digital
-                design.
+                design
               </p>
 
               <div className="header__buttons" id="buttons">

@@ -452,7 +452,7 @@ const IndexPage = () => {
         customizeCardSix.play()
       })
       .addTo(controller)
-  })
+  }, [])
 
   return (
     <Layout>

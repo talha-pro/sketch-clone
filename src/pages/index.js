@@ -32,17 +32,6 @@ import react from "../assets/react.png"
 import logo from "../assets/logo.png"
 
 const IndexPage = () => {
-  // let heading = useRef(null)
-
-  // useEffect(() => {
-  //   TweenMax.to(heading, 1, {
-  //     opacity: 1,
-  //     y: -20,
-  //     ease: Power3.easeInOut,
-  //     delay: 0.2,
-  //   })
-  // }, [])
-
   let customizePara = useRef(null)
   let customizeCards = useRef(null)
   let customizeCardsTwo = useRef(null)
@@ -102,14 +91,6 @@ const IndexPage = () => {
       "text"
     )
 
-    // tl.from(
-    //   "#subheading",
-    //   0.7,
-    //   { y: 50, ease: Power4.ease, delay: 1, opacity: 0 },
-    //   "text"
-    // )
-    // tl.to("#heading", 0.5, { y: 0, opacity: 1 }, "+=1")
-
     const controller = new ScrollMagic.Controller()
 
     const headingTimeline = new gsap.timeline({ paused: true })
@@ -155,7 +136,6 @@ const IndexPage = () => {
       y: 40,
       ease: Power4.ease,
       opacity: 0,
-      // delay: 0.1,
     })
 
     new ScrollMagic.Scene({
@@ -472,7 +452,7 @@ const IndexPage = () => {
         customizeCardSix.play()
       })
       .addTo(controller)
-  }, [])
+  })
 
   return (
     <Layout>

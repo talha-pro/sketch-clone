@@ -789,7 +789,7 @@ const IndexPage = () => {
         </Container>
       </section>
 
-      <section className="cloud">
+      {/* <section className="cloud">
         <Container className="cloud__container">
           <Row>
             <Col className="cloud__column">
@@ -838,7 +838,7 @@ const IndexPage = () => {
             </Col>
           </Row>
         </Container>
-      </section>
+      </section> */}
 
       <section className="customize d-flex align-items-center">
         <Container className="customize__container">

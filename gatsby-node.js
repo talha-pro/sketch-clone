@@ -11,7 +11,7 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
       module: {
         rules: [
           {
-            test: /bad-module/,
+            test: /ScrollMagic/,
             use: loaders.null(),
           },
         ],

@@ -91,7 +91,7 @@ const IndexPage = () => {
       "text"
     )
 
-    const controller = new ScrollMagic.Controller()
+    let controller = new ScrollMagic.Controller()
 
     const headingTimeline = new gsap.timeline({ paused: true })
 
